@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:magazord_app_flutter/app/models/products_list/product_model.dart';
+import 'package:magazord_app_flutter/app/modules/products_list/subpages/product_details_page.dart';
 import 'package:magazord_app_flutter/app/repositories/products_list/products_list_repo.dart';
 
 class ProductsListController extends GetxController {
@@ -21,6 +22,6 @@ class ProductsListController extends GetxController {
   }
 
   void didTapProduct(int index) {
-    // TODO: details page
+    Get.to(() => ProductDetailsPage(productModel: _products[index]));
   }
 }
